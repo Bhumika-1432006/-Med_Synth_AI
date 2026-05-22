@@ -7,3 +7,5 @@ segno
 pillow
 supabase
 python-dotenv
+sdv
+ctgan
