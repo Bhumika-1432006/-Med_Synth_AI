@@ -310,7 +310,7 @@ else:
         
         # Injected dashboard picture block stretching across margins.
         st.markdown('<div class="dashboard-hero-crop">', unsafe_allow_html=True)
-        st.image("D:/med-synth-ai/images/hero_docs.png", use_container_width=True)
+        st.image("images/hero_docs.png", use_container_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
         st.write("")
