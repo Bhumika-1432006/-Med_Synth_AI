@@ -459,7 +459,7 @@ else:
                 <img src="data:image/png;base64,{}" 
                      style="width: 100%; height: 351px; object-fit: contain;">
             </div>
-        """.format(convert_local_file_to_base64("D:/med-synth-ai/images/upload.png")), unsafe_allow_html=True)
+        """.format(convert_local_file_to_base64("images/upload.png")), unsafe_allow_html=True)
         # --- ADJUSTED IMAGE CODE END ---
         if uploaded_files:
             dfs = [pd.read_csv(file) for file in uploaded_files]
@@ -738,7 +738,7 @@ else:
                         <img src="data:image/png;base64,{}" 
                              style="width: 100%; height: auto; object-fit: contain; border-radius: 16px;">
                     </div>
-                """.format(convert_local_file_to_base64("D:/med-synth-ai/images/secure.png")), unsafe_allow_html=True)
+                """.format(convert_local_file_to_base64("images/secure.png")), unsafe_allow_html=True)
             
             with col_tools:
                 st.markdown('<h3 class="subheader-custom">🔐 Privacy Vulnerability Scan</h3>', unsafe_allow_html=True)
