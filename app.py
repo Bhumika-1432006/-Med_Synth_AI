@@ -51,55 +51,37 @@ if "username" not in st.session_state: st.session_state.username = ""
 if "raw_data" not in st.session_state: st.session_state.raw_data = None
 if "cleaned_data" not in st.session_state: st.session_state.cleaned_data = None
 if "synthetic_data" not in st.session_state: st.session_state.synthetic_data = None
-# ADD THIS LINE:
 if "region_mode" not in st.session_state: st.session_state.region_mode = "Default (Raw)"
 
+# RELATIVE PATH FUNCTION
 def convert_local_file_to_base64(file_path):
+    # This looks for the file in the project directory, not the D: drive
     if os.path.exists(file_path):
         with open(file_path, "rb") as image_payload:
             return base64.b64encode(image_payload.read()).decode()
     return ""
 
-stethoscope_base64 = convert_local_file_to_base64("D:/med-synth-ai/images/medical_generic.png")
+# Update paths to relative (folder/file.png)
+stethoscope_base64 = convert_local_file_to_base64("images/medical_generic.png")
 
 # --- GLOBAL STYLING SYSTEM ---
-# Uses .replace() to safely inject image variables without f-string syntax issues
-st.markdown("""
+st.markdown(f"""
     <style>
-    /* 1. Global Background (Keep simple) */
-    .stApp { background-color: #f8fafc !important; }
-    
-    /* 2. Sidebar Icons - FIX: Do not use font-size: 0, it breaks icons */
-    [data-testid="stSidebarCollapseButton"] { 
+    .stApp {{ background-color: #f8fafc !important; }}
+    [data-testid="stSidebarCollapseButton"] {{ 
         background-color: transparent !important; 
         border: none !important; 
-    }
-    
-    /* 3. Scoped Watermark: ONLY apply to specific panels */
-    .step1-panel, .step2-panel, .step3-panel { position: relative; }
-    
-    .step1-panel::after, .step2-panel::after, .step3-panel::after {
+    }}
+    .step1-panel, .step2-panel, .step3-panel {{ position: relative; }}
+    .step1-panel::after, .step2-panel::after, .step3-panel::after {{
         content: "";
         position: absolute;
-        width: 150px;
-        height: 150px;
-        background-image: url('data:image/png;base64,%s');
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 0.07;
-        pointer-events: none;
-        z-index: 0; /* Ensures it stays behind other elements */
-    }
-    
-    /* 4. Button Fixes: Target only inside your custom panels */
-    .content-panel button, .step1-panel button, .step2-panel button, .step3-panel button {
-        background-color: #2563eb !important;
-        color: white !important;
-        border-radius: 12px !important;
-    }
-    /* Primary Interactive Buttons (Blue Medical Theme) */
-    /* This targets only buttons inside Streamlit's button container, avoiding other inputs */
-    div.stButton > button {
+        width: 150px; height: 150px;
+        background-image: url('data:image/png;base64,{stethoscope_base64}');
+        background-size: contain; background-repeat: no-repeat;
+        opacity: 0.07; pointer-events: none; z-index: 0;
+    }}
+    div.stButton > button {{
         background-color: #2563eb !important;
         color: #ffffff !important;
         border: none !important;
@@ -108,17 +90,17 @@ st.markdown("""
         font-weight: 600 !important;
         transition: all 0.2s ease !important;
         box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2) !important;
-    }
-    
-    /* Button Hover State */
-    div.stButton > button:hover {
+    }}
+    div.stButton > button:hover {{
         background-color: #1d4ed8 !important;
         transform: translateY(-1px);
         box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3) !important;
-        color: #ffffff !important;
-    }
+    }}
     </style>
 """, unsafe_allow_html=True)
+
+# ... [Keep your existing logic for Sidebar, Dashboard, Scan, AI, and Audit sections exactly as they were] ...
+# [The rest of your code block continues here]
 # ... [Keep the rest of your original logic unchanged here] ...
 
 # --- SIDEBAR & LOGIN ---
