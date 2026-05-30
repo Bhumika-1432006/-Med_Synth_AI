@@ -1257,18 +1257,25 @@ else:
                 if search_query: st.success("✅ Identity Protected.")
 
                 st.write("---")
-                csv = st.session_state.synthetic_data.to_csv(index=False).encode('utf-8')
+                
+                # 1. Convert the active synthetic DataFrame into an encoded CSV text array payload
+                csv_data_string = st.session_state.synthetic_data.to_csv(index=False)
+                csv_bytes = csv_data_string.encode('utf-8')
+                
                 exp1, exp2 = st.columns(2)
-                with exp1: st.download_button(label="⬇️ Download Safe CSV", data=csv, file_name="synthetic_records.csv", mime="text/csv")
+                with exp1: 
+                    st.download_button(label="⬇️ Download Safe CSV", data=csv_bytes, file_name="synthetic_records.csv", mime="text/csv")
+                
                 with exp2:
-                    # ADD THIS DEFINITION RIGHT HERE TO PREVENT THE NAMEERROR:
-                    # Paste your real production application URL or your Supabase storage bucket link here
-                    supabase_download_url = "https://med-synth-ai.streamlit.app"
+                    # 2. ENCODE THE DATA INTO A DATA-URI LINK: This embeds the file transfer instruction directly inside the QR string matrix!
+                    base64_payload = base64.b64encode(csv_bytes).decode('utf-8')
+                    dynamic_download_url = f"data:text/csv;base64,{base64_payload}"
                     
-                    qr = segno.make_qr(supabase_download_url)
+                    # 3. Compile the QR pattern referencing the streaming file transfer protocol line
+                    qr = segno.make_qr(dynamic_download_url)
                     buff = BytesIO()
                     qr.save(buff, kind='png', scale=5)
-                    st.image(buff.getvalue(), width=150)
+                    st.image(buff.getvalue(), width=150, caption="Scan to download to mobile")
         st.markdown('</div>', unsafe_allow_html=True)
 
         # --- FOOTER DIRECTION NAV CONTROL ---
