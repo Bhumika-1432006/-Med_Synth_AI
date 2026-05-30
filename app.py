@@ -1261,7 +1261,11 @@ else:
                 exp1, exp2 = st.columns(2)
                 with exp1: st.download_button(label="⬇️ Download Safe CSV", data=csv, file_name="synthetic_records.csv", mime="text/csv")
                 with exp2:
-                    qr = segno.make_qr("https://med-synth-secure-transfer.local/auth-token-88392")
+                    # ADD THIS DEFINITION RIGHT HERE TO PREVENT THE NAMEERROR:
+                    # Paste your real production application URL or your Supabase storage bucket link here
+                    supabase_download_url = "https://med-synth-ai.streamlit.app"
+                    
+                    qr = segno.make_qr(supabase_download_url)
                     buff = BytesIO()
                     qr.save(buff, kind='png', scale=5)
                     st.image(buff.getvalue(), width=150)
