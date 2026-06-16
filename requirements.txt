@@ -1,0 +1,11 @@
+streamlit
+pandas
+matplotlib
+seaborn
+plotly
+segno
+pillow
+supabase
+python-dotenv
+sdv
+ctgan

@@ -1,0 +1,71 @@
+Aadhar_ID,Patient_Name,Age,Gender,Phone_Number,Diagnosis,Blood_Group,Cholesterol,Max_Heart_Rate
+ID-001,Vikram Singh,42,Male,9845621033,Asthma,B+,215,150
+ID-002,Sunita Das,51,Female,9123456789,Arthritis,O+,240,110
+ID-003,Rohan Verma,29,Male,8890123456,Eczema,AB-,190,165
+ID-004,Anita Bose,65,Female,7765432109,Hypertension,A-,310,125
+ID-005,Suresh Kumar,38,Male,9988776655,Gastritis,O-,285,140
+ID-006,Kavita Roy,45,Female,9234567890,Thyroid Disorder,B-,225,135
+ID-007,Amit Sharma,31,Male,8765432109,Anemia,A+,180,175
+ID-008,Meena Shah,58,Female,8345678901,Type 2 Diabetes,AB+,350,115
+ID-009,Rahul Mehta,27,Male,9567890123,Bronchitis,O+,305,160
+ID-010,Geeta Nair,70,Female,7012345678,Heart Disease,B+,330,105
+ID-011,Manish Joshi,44,Male,9456789012,Migraine,A-,295,145
+ID-012,Shalini Rao,33,Female,8901234567,Anemia,AB-,195,155
+ID-013,Pradeep Singh,52,Male,7890123456,Hypertension,O-,320,130
+ID-014,Tanya Pillai,25,Female,9876543210,Thyroid Disorder,A+,275,170
+ID-015,Vijay Kulkarni,62,Male,8234567890,Arthritis,B-,315,120
+ID-016,Rekha Gupta,39,Female,7654321098,Gastritis,AB+,250,148
+ID-017,Sandeep Patil,48,Male,9345678901,Type 2 Diabetes,O+,360,138
+ID-018,Pooja Reddy,28,Female,8567890123,Eczema,B+,185,162
+ID-019,Manoj Verma,55,Male,7456789012,Heart Disease,A-,340,118
+ID-020,Divya Singh,36,Female,9012345678,Bronchitis,O-,280,155
+ID-021,Ajay Verma,45,Male,8987654321,Asthma,O+,210,142
+ID-022,Suman Rao,53,Female,9123450987,Hypertension,B-,280,115
+ID-023,Karan Dev,30,Male,7654321098,Thyroid Disorder,A-,195,168
+ID-024,Lata Mangesh,66,Female,9876501234,Heart Disease,AB+,325,108
+ID-025,Harish Taneja,40,Male,7012349876,Migraine,O-,260,135
+ID-026,Nisha Gupta,29,Female,9567894321,Eczema,A+,175,172
+ID-027,Vikram Rathore,57,Male,8345671234,Type 2 Diabetes,B+,345,122
+ID-028,Deepika Singh,34,Female,9234560123,Bronchitis,AB-,290,150
+ID-029,Rajesh Khanna,71,Male,8765439876,Hypertension,O+,315,110
+ID-030,Smita Patil,43,Female,7456781234,Gastritis,A-,230,145
+ID-031,Gaurav Soni,32,Male,9012348765,Anemia,B-,205,160
+ID-032,Priya Dutta,48,Female,8901237654,Arthritis,O-,270,128
+ID-033,Amitabh Rai,60,Male,7890125678,Heart Disease,AB+,360,112
+ID-034,Sneha Kulkarni,26,Female,9345674321,Thyroid Disorder,A+,285,175
+ID-035,Mohit Sehgal,39,Male,8567890123,Migraine,O+,295,140
+ID-036,Anjali Desai,55,Female,7123456789,Type 2 Diabetes,B-,355,118
+ID-037,Sandeep Reddy,41,Male,9988112233,Bronchitis,A-,245,155
+ID-038,Radhika Jain,37,Female,8234569012,Eczema,O-,180,165
+ID-039,Brijesh Yadav,50,Male,7678901234,Hypertension,B+,310,130
+ID-040,Tara Sharma,24,Female,9098765432,Anemia,AB-,190,178
+ID-041,Vijay Nair,44,Male,8887776665,Asthma,O+,220,140
+ID-042,Sunil Rao,52,Female,9112233445,Arthritis,A-,250,115
+ID-043,Rohan Das,28,Male,8800991122,Eczema,B+,195,160
+ID-044,Anita Shah,64,Female,7766554433,Hypertension,AB+,300,120
+ID-045,Suresh Mehta,39,Male,9988001122,Gastritis,O-,290,135
+ID-046,Kavita Nair,46,Female,9234561122,Thyroid Disorder,A+,230,130
+ID-047,Amit Gupta,30,Male,8765431122,Anemia,B-,185,170
+ID-048,Meena Singh,57,Female,8345671122,Type 2 Diabetes,AB-,345,120
+ID-049,Rahul Kulkarni,26,Male,9567891122,Bronchitis,O+,310,155
+ID-050,Geeta Verma,69,Female,7012341122,Heart Disease,A-,320,110
+ID-051,Anil Gupta,24,Male,9973990525,Thyroid,O+,184,101
+ID-052,Deepa Iyer,68,Female,9031366471,Migraine,A+,209,111
+ID-053,Anjali Reddy,27,Female,8847171141,Diabetes,O-,327,180
+ID-054,Ritu Malhotra,37,Female,9779483085,Heart,O-,177,118
+ID-055,Neha Malhotra,39,Female,8534759816,Diabetes,A+,153,134
+ID-056,Vijay Patel,73,Male,7168208048,Hypertension,AB+,264,168
+ID-057,Priya Khan,22,Female,7246935314,Anemia,A+,341,164
+ID-058,Ritu Gupta,49,Female,7844037317,Hypertension,B+,325,139
+ID-059,Ritu Patel,55,Female,8605660119,Heart,A+,333,181
+ID-060,Suresh Deshmukh,34,Male,7989485284,Thyroid,O+,310,193
+ID-061,Sunil Gupta,35,Male,7991041703,Anemia,B-,321,165
+ID-062,Rajesh Malhotra,74,Male,8976394756,Migraine,AB+,308,114
+ID-063,Meera Iyer,30,Female,7101902862,Anemia,B-,176,149
+ID-064,Vijay Khan,57,Male,8492388219,Anemia,AB-,301,170
+ID-065,Neha Deshmukh,27,Female,7133750436,Heart,AB+,273,134
+ID-066,Deepa Khan,60,Female,9429802251,Migraine,A+,360,186
+ID-067,Neha Nair,63,Female,9031973127,Hypertension,O-,355,199
+ID-068,Sanjay Iyer,47,Male,8971639151,Diabetes,AB+,329,130
+ID-069,Aarti Gupta,32,Female,7546141999,Migraine,A-,360,111
+ID-070,Rajesh Nair,63,Male,7870478708,Asthma,B-,348,116
